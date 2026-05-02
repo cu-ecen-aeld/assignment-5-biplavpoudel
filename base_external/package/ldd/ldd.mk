@@ -1,15 +1,16 @@
 
 ##############################################################
 #
-# LDD
+# LDD3
 #
 ##############################################################
 
 #Referencing assignment7 git contents
-LDD_VERSION = 5bce7935f68575fb6a1190277f4c4e4571cab762
-LDD_SITE = git@github.com:cu-ecen-aeld/assignments-7-biplavpoudel.git
-LDD_SITE_METHOD = git
-LDD_GIT_SUBMODULES = YES
+LDD3_VERSION = 5bce7935f68575fb6a1190277f4c4e4571cab762
+LDD3_SITE = git@github.com:cu-ecen-aeld/assignments-7-biplavpoudel.git
+LDD3_SITE_METHOD = git
+LDD3_GIT_SUBMODULES = YES
+LDD3_MODULE_SUBDIRS = scull misc-modules
 
 define LDD_BUILD_CMDS
 	$(MAKE) $(TARGET_CONFIGURE_OPTS) CC="$(TARGET_CC)" -C $(@D)/misc-modules all
