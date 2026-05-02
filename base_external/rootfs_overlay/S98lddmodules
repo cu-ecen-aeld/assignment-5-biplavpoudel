@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# Script to load/unload scull driver, and faulty driver and hello module from misc-module.
+
+case "$1" in
+    start)
+        echo "Loading LDD modules"
+        scull_load || exit 1            #Loading scull driver
+        module_load faulty || exit 1    #Loading faulty driver
+        modprobe hello || exit 1        #Loading hello module using modprobe
+        ;;
+
+    stop)
+        echo "Unloading LDD modules"
+        scull_unload
+        module_unload faulty
+        rmmod hello 2>/dev/null
+        ;;
+
+    restart)
+        echo "Restarting the LDD modules"
+        $0 stop
+        $0 start
+        ;;
+
+    *)
+        echo "Usuage: $0 {start | stop | restart}
+        exit 1
+
+esac
+
+exit 0
