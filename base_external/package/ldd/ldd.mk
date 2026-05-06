@@ -7,7 +7,7 @@
 
 #Referencing assignment7 git contents
 LDD_VERSION = 78e81c283ce49abee1117fae89e7462f4ffa0172
-LDD_SITE = git@github.com:cu-ecen-aeld/assignments-7-biplavpoudel.git
+LDD_SITE = git@github.com:cu-ecen-aeld/assignment-7-biplavpoudel.git
 LDD_SITE_METHOD = git
 LDD_GIT_SUBMODULES = YES
 LDD_MODULE_SUBDIRS = scull misc-modules
