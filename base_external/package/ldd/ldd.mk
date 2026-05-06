@@ -26,4 +26,5 @@ define LDD3_INSTALL_TARGET_CMDS
 	@(INSTALL) -m 0755 $(@D)/misc-modules/module_unload $(TARGET_DIR)/usr/bin
 endef
 
+$(eval $(kernel-module))
 $(eval $(generic-package))
